@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            dice1 = 0;
+            dice2 = 0;
+            total = 0;
+            function roll()
+            {
+                dice1 = Math.floor(Math.random()*6)+1;
+                dice2 = Math.floor(Math.random()*6)+1;
+                total = dice1+dice2;
+
+                document.getElementById("dice uno").innerHTML = "Dice 1: " + dice1;
+                document.getElementById("dice dos").innerHTML = "Dice 2: " + dice2;
+                document.getElementById("totals").innerHTML = "Total: " + (dice1+dice2);
+            }
+        </script>
+    </head>
+    <link rel = "stylesheet" href = "style.css">
+    <body>
+        <button onclick = "roll();">Roll Dice</button><br>
+        <span>
+            <span id = "dice uno">Dice 1: 0</span><br>
+            <span id = "dice dos">Dice 2: 0</span><br>
+            <span id = "totals">Total: 0</span><br>
+        </span>
+    </body>
+</html>
